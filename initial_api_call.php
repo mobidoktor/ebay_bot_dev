@@ -23,7 +23,7 @@ $apicall .= "&paginationInput.entriesPerPage=101";
 
 // Load the call and capture the document returned by eBay API
 $resp = simplexml_load_file($apicall);
-//echo json_encode($resp);
+echo json_encode($resp);
 
 // Check to see if the request was successful, else print an error
 if ($resp->ack == "Success") {
@@ -64,7 +64,7 @@ else {
 <table>
 <tr>
   <td>
-    <!--?php echo $results;?-->
+    <?php echo $resp;?>
   </td>
 </tr>
 </table>
