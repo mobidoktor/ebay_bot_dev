@@ -66,6 +66,7 @@ class EbayAPIQuery {
 				return $calls;
 			}
 		}
+		$this->pageNumber = 1;
 		$fp = fopen('../sweeps/foo.txt', 'w');
 		fwrite($fp, json_encode($calls));
 		return $calls;
@@ -76,21 +77,15 @@ class EbayAPIQuery {
 $appid = 'PatrickF-FirstTry-PRD-eb7edec1b-d2b445b5';
 
 $q = new EbayAPIQuery($appid, 'findCompletedItems', 'harry potter');
+$q = new EbayAPIQuery($appid, 'findItemsByKeywords', 'harry potter');
 
-//echo $q->makeCall();
+//echo $q->make100Calls();
 
 $q->make100Calls();
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<script type="text/javascript">
 
-</script>
-</body>
-</html>
+
+
+

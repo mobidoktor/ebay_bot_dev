@@ -1,0 +1,21 @@
+DB STRUCTURE - Ebay Bot
+
+Option 1)
+
+# Login System
+
+Usual login system used in other projects.
+
+	- Users
+		* id
+		* username
+		* password (hash SHA256)
+	- Login Tokens
+		* id (PK)
+		* user_id (FK -> Users.id)
+
+
+# Product Tracking
+
+The alogorithm branches out across various products, collects search terms/filters to 'get the api' to the right place. These are the 'good products' that we  will be tracking long term.
+
