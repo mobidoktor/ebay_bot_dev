@@ -1,0 +1,16 @@
+EBAY BOT - SEARCHING ALGORITHM
+
+Approach #1
+
+In this approach we are looking for specific productIDs. This is so later on we can be confident that the products shown in a search query are exactly the same (thus making the pricing a lot more reliable).
+
+	- Start with one search term (something generic like 'xbox one')
+	- Call the API with this search term and collect two things :
+		- Any product with an actual productID 
+		- Any product with an associated categoryID
+	- Store the products in a `products` table and the categories in a `categories` table
+	- Then iterate over each of the categories
+		- For each category, run a search, collect productID(s), and store them in the DB table
+	- Then start the process again with a different search term.
+
+The search term is the most vital part of this approach. For the first iteration of this project i'd suggest simply manually building a dictionary of popular product searches and working off that. In the future there is scope for a more elegant approach to this (automatically building the dictionary using other API calls).
