@@ -19,3 +19,9 @@ Usual login system used in other projects.
 
 The alogorithm branches out across various products, collects search terms/filters to 'get the api' to the right place. These are the 'good products' that we  will be tracking long term.
 
+// Create EbayQuery interface
+// with classes for :
+//		- findItemsByKeywords
+//		- findCompletedItems
+// 		- findItemsByProduct
+
